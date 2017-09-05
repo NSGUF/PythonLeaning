@@ -120,7 +120,7 @@ axpro.grid()#打开网格
 axpro.set_xticks(xticks)# x轴每个标签的具体位置
 axpro.set_xticklabels(pros)# 设置每个标签的名字
 axpro.set_xlim(0,20)# 设置x轴的范围
-axpro.set_ylim([0, 100])# 设置y轴的范围
+axpro.set_ylim(0, prosdsored[0][1]+10)# 设置y轴的范围
 
 for bar, color in zip(bars, colors):
     bar.set_color(color)# 给每个bar分配指定的颜色
