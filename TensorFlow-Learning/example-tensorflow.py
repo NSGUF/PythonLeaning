@@ -4,20 +4,22 @@ Created on Thu Aug 31 15:39:04 2017
 
 @author: ZhifengFang
 """
-
-import tensorflow as tf
-print(tf.__version__)#查看版本
-hello=tf.constant('Hello')
-a=tf.constant([1.0,2.0],name='a')
-b=tf.constant([2.0,3.0],name='b')
-g=tf.Graph()
+#Tensorflow中的所有计算都会被转化为计算图上的节点，而节点之间的边描述了
+#计算之间的依赖关系
+import tensorflow as tf #先引用包
+#print(tf.__version__)#查看版本
+#hello=tf.constant('Hello')#一个计算，计算结果为一个张量，保存在变量hello中
+#a=tf.constant([1.0,2.0],name='a')
+#b=tf.constant([2.0,3.0],name='b')
+#g=tf.Graph()#获取整个图
+#print(a.graph is tf.get_default_graph())#a.graph用于查看张量a所属的计算图
 #==============================================================================
 # with g.device('/gpu:0'):#指定计算运行的设备
 #     result=a+b
 #==============================================================================
-result=a+b#a和b的类型必须一样，否则会报错，所以建议在创建变量时，在后边添加dtype=tf.float32
-print(result)
-print(result.get_shape())#获取维度
+#result=a+b#a和b的类型必须一样，否则会报错，所以建议在创建变量时，在后边添加dtype=tf.float32
+#print(result)
+#print(result.get_shape())#获取维度
 #tf.InteractiveSession()加载它自身作为默认构建的session，tensor.eval()和operation.run()取决于默认的session.
 #换句话说：InteractiveSession 输入的代码少，原因就是它允许变量不需要使用session就可以产生结构。
 #会话总结
@@ -33,24 +35,24 @@ print(result.get_shape())#获取维度
 # sess.close()
 #==============================================================================
 #==============================================================================
-# with tf.Session as sess:#改编方法二、利用上下文管理器解决close的调用，
+# with tf.Session() as sess:#改编方法二、利用上下文管理器解决close的调用，
 #     print(sess.run(result))
-#==============================================================================
-#==============================================================================
 # sess=tf.Session()#Tensorflow会自动生成一个默认的计算图，若没有特殊指定，则运算自动加入，但tensorflow不会自动生成默认的会话
 # with sess.as_default():#指定默认会话
 #     print(result.eval())
 #==============================================================================
 
-#使用ConfigProto可以对会话进行配置，且对上述两种方法都可
-config=tf.ConfigProto(allow_soft_placement=True,
-                      log_device_placement=True)#第一个参数表示当在某些不能在GPU上运算的情况下，自动调整到CPU上，第二个参数表示日志中将会记录每个节点在哪个设备上以方便调试，默认都为false
-sess1=tf.InteractiveSession(config=config)
-sess2=tf.Session(config=config)
-
-with sess1.as_default():
-    print(result.eval())
-
+#==============================================================================
+# #使用ConfigProto可以对会话进行配置，且对上述两种方法都可
+# config=tf.ConfigProto(allow_soft_placement=True,
+#                       log_device_placement=True)#第一个参数表示当在某些不能在GPU上运算的情况下，自动调整到CPU上，第二个参数表示日志中将会记录每个节点在哪个设备上以方便调试，默认都为false
+# sess1=tf.InteractiveSession(config=config)
+# sess2=tf.Session(config=config)
+# 
+# with sess1.as_default():
+#     print(result.eval())
+# 
+#==============================================================================
 
 
 
@@ -123,44 +125,42 @@ with sess1.as_default():
 # #张量的定义：变量的声明函数tf.Variable是一个运算，运算输出结果就是一个张量，所以，变量只是一种特殊的张量
 #==============================================================================
 
-#==============================================================================
-# from numpy.random import RandomState
-# 
-# batch_size = 8
-# w1= tf.Variable(tf.random_normal([2, 3], stddev=1, seed=1))
-# w2= tf.Variable(tf.random_normal([3, 1], stddev=1, seed=1))
-# x = tf.placeholder(tf.float32, shape=(None, 2), name="x-input")
-# y_= tf.placeholder(tf.float32, shape=(None, 1), name='y-input')
-# a = tf.matmul(x, w1)
-# y = tf.matmul(a, w2)
-# cross_entropy = -tf.reduce_mean(y_ * tf.log(tf.clip_by_value(y, 1e-10, 1.0))) 
-# train_step = tf.train.AdamOptimizer(0.001).minimize(cross_entropy)
-# rdm = RandomState(1)
-# X = rdm.rand(128,2)
-# Y = [[int(x1+x2 < 1)] for (x1, x2) in X]
-# with tf.Session() as sess:
-#     init_op = tf.global_variables_initializer()
-#     sess.run(init_op)
-#     # 输出目前（未经训练）的参数取值。
-#     print("w1:", sess.run(w1))
-#     print("w2:", sess.run(w2))
-#     print("\n")
-#     
-#     # 训练模型。
-#     STEPS = 5000
-#     for i in range(STEPS):
-#         start = (i*batch_size) % 128
-#         end = (i*batch_size) % 128 + batch_size
-#         sess.run(train_step, feed_dict={x: X[start:end], y_: Y[start:end]})
-#         if i % 1000 == 0:
-#             total_cross_entropy = sess.run(cross_entropy, feed_dict={x: X, y_: Y})
-#             print("After %d training step(s), cross entropy on all data is %g" % (i, total_cross_entropy))
-#     
-#     # 输出训练后的参数取值。
-#     print("\n")
-#     print("w1:", sess.run(w1))
-#     print( "w2:", sess.run(w2))
-#==============================================================================
+from numpy.random import RandomState
+
+batch_size = 8#定义训练数据的大小
+w1= tf.Variable(tf.random_normal([2, 3], stddev=1, seed=1))#定义神经网络的参数
+w2= tf.Variable(tf.random_normal([3, 1], stddev=1, seed=1))
+x = tf.placeholder(tf.float32, shape=(None, 2), name="x-input")
+y_= tf.placeholder(tf.float32, shape=(None, 1), name='y-input')
+a = tf.matmul(x, w1)
+y = tf.matmul(a, w2)
+cross_entropy = -tf.reduce_mean(y_ * tf.log(tf.clip_by_value(y, 1e-10, 1.0))) 
+train_step = tf.train.AdamOptimizer(0.001).minimize(cross_entropy)
+rdm = RandomState(1)
+X = rdm.rand(128,2)
+Y = [[int(x1+x2 < 1)] for (x1, x2) in X]
+with tf.Session() as sess:
+    init_op = tf.global_variables_initializer()
+    sess.run(init_op)
+    # 输出目前（未经训练）的参数取值。
+    print("w1:", sess.run(w1))
+    print("w2:", sess.run(w2))
+    print("\n")
+    
+    # 训练模型。
+    STEPS = 5000
+    for i in range(STEPS):
+        start = (i*batch_size) % 128
+        end = (i*batch_size) % 128 + batch_size
+        sess.run(train_step, feed_dict={x: X[start:end], y_: Y[start:end]})
+        if i % 1000 == 0:
+            total_cross_entropy = sess.run(cross_entropy, feed_dict={x: X, y_: Y})
+            print("After %d training step(s), cross entropy on all data is %g" % (i, total_cross_entropy))
+    
+    # 输出训练后的参数取值。
+    print("\n")
+    print("w1:", sess.run(w1))
+    print( "w2:", sess.run(w2))
 
 
 

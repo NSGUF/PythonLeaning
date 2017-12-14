@@ -4,6 +4,9 @@ Created on Tue Aug 22 15:17:33 2017
 
 @author: ZhifengFang
 """
+#解决乱码问题
+#位置是C:\Python27\lib\site-packages\matplotlib\mpl-data\matplotlibrc
+#打开matplotlibrc文件进行编辑，找到#font.family : sans-serif更改为： font.family : SimHei
 #不适合在较大的应用程序中使用
 import matplotlib.pyplot as plt
 import matplotlib
@@ -23,7 +26,7 @@ plt.title("example")#整个图的标题
 plt.ylim(-2,2)#y轴的限制
 plt.xlim(0,10)
 plt.legend()#画图示
-plt.savefig('test.png',dpi=120)#大小是8*120px 4*120px
+plt.savefig('test.png',dpi=120)#保存图片，大小是8*120px 4*120px
 plt.show()#整张图显示
 
 
