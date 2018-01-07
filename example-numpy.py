@@ -65,6 +65,7 @@ print(d.std())#标准差
 print(d.var())#方差
 print(d.argmin())#最小索引
 print(d.argmax())#最大索引
+print(d.argsort())#排序获得索引
 print(d.repeat(5))#重复
 print(np.power(b,3))#b的3次方
 print(np.repeat(3, 4))#创建一个一维数组，元素为3，重复4次

@@ -25,8 +25,9 @@ line_y=line_x
 plt.plot(line_x,line_y,color='blue',linewidth=3)
 plt.show()
 """
-'''
 #逻辑回归分类器
+'''
+
 
 import numpy as np
 from sklearn import linear_model
@@ -47,7 +48,6 @@ plot_classifier(classifier,X,y)
 '''
 import matplotlib.pyplot as plt
 import numpy as np
-
 
 # 定义画图函数
 def plot_classifier(classifier, X, y):
@@ -103,7 +103,7 @@ plot_classifier(classifier_gaussiannb,X,y)
 '''
 
 # 分割训练集和测试集
-
+'''
 from sklearn.naive_bayes import GaussianNB
 from sklearn import cross_validation
 
@@ -129,6 +129,109 @@ accuracy=100.0*(y_test==y_test_pre).sum()/x_test.shape[0]
 print('结果:',accuracy)
 # 画出数据和边界
 plot_classifier(classifier_gaussiannb,x_test,y_test_pre)
+'''
+
+# 性能指标
+'''
+from sklearn.naive_bayes import GaussianNB
+from sklearn import cross_validation
+
+# 准备数据
+input_file = 'data_multivar.txt'
+X = []
+y = []
+with open(input_file, 'r') as f:
+    for line in f.readlines():
+        data = [float(x) for x in line.split(',')]
+        X.append(data[:-1])
+        y.append(data[-1])
+
+X = np.array(X)
+y = np.array(y)
+x_train,x_test,y_train,y_test=cross_validation.train_test_split(X,y,test_size=0.25,random_state=5)# 测试数据占25%，
+# 建立朴素贝叶斯分类器
+classifier_gaussiannb=GaussianNB()
+classifier_gaussiannb.fit(x_train,y_train)
+y_test_pre=classifier_gaussiannb.predict(x_test)
+# 计算分类器的准确性
+# accuracy=100.0*(y_test==y_test_pre).sum()/x_test.shape[0]
+
+num_validations = 5
+# 正确率
+accuracy = cross_validation.cross_val_score(classifier_gaussiannb,X, y, scoring='accuracy', cv=num_validations)
+print("Accuracy: " + str(round(100*accuracy.mean(), 2)) + "%")
+# F1
+f1 = cross_validation.cross_val_score(classifier_gaussiannb,X, y, scoring='f1_weighted', cv=num_validations)
+print("F1: " + str(round(100*f1.mean(), 2)) + "%")
+# 精度
+precision = cross_validation.cross_val_score(classifier_gaussiannb,X, y, scoring='precision_weighted', cv=num_validations)
+print("Precision: " + str(round(100*precision.mean(), 2)) + "%")
+# 召回率
+recall = cross_validation.cross_val_score(classifier_gaussiannb,X, y, scoring='recall_weighted', cv=num_validations)
+print("Recall: " + str(round(100*recall.mean(), 2)) + "%")
+# 画出数据和边界
+plot_classifier(classifier_gaussiannb,x_test,y_test_pre)
+
+'''
+
+# 混淆矩阵
+'''
+from sklearn.metrics import confusion_matrix
+
+# 显示混淆矩阵
+def plot_confusion_matrix(confusion_mat):
+    plt.imshow(confusion_mat,interpolation='nearest',cmap=plt.cm.gray)
+    plt.colorbar()
+    tick_marks=np.arange(4)
+    plt.xticks(tick_marks,tick_marks)
+    plt.yticks(tick_marks,tick_marks)
+    plt.show()
+
+y_true = [1, 0, 0, 2, 1, 0, 3, 3, 3]
+y_pred = [1, 1, 0, 2, 1, 0, 1, 3, 3]
+confusion_mat=confusion_matrix(y_true,y_pred)
+plot_confusion_matrix(confusion_mat)
+'''
+
+# 提取性能报告
+'''
+from sklearn.metrics import classification_report
+
+target_names = ['Class-0', 'Class-1', 'Class-2', 'Class-3']
+print(classification_report(y_true,y_pred,target_names=target_names))
+'''
+
+# 根据汽车特征评估质量
+
+from sklearn import preprocessing
+from sklearn.ensemble import RandomForestClassifier
+
+# 准备数据
+input_file='car.data.txt'
+
+X=[]
+count=0
+with open(input_file,'r') as f:
+    for line in f.readlines():
+        data=line[:-1].split(',')
+        X.append(data)
+
+X=np.array(X)
+
+# 使用标记编将字符串转化为数值
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
