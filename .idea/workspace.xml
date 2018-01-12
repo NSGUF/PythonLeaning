@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="851ffb8b-f7be-40a6-ada2-d4f19b110a18" name="Default" comment="添加分类器">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Machine-Learning/03predictive-modeling/building_event_binary.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Machine-Learning/03predictive-modeling/building_event_multiclass.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Machine-Learning/03predictive-modeling/data_multivar.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Machine-Learning/03predictive-modeling/data_multivar_imbalance.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Machine-Learning/03predictive-modeling/svm.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Machine-Learning/03predictive-modeling/traffic_data.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example-python.py" afterPath="$PROJECT_DIR$/example-python.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/学习文档/机器学习/2、创建分类器.md" afterPath="$PROJECT_DIR$/学习文档/机器学习/2、创建分类器.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Machine-Learning/classifier/adult.data.txt" afterPath="$PROJECT_DIR$/Machine-Learning/02classifier/adult.data.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Machine-Learning/classifier/car.data.txt" afterPath="$PROJECT_DIR$/Machine-Learning/02classifier/car.data.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Machine-Learning/classifier/classifier.py" afterPath="$PROJECT_DIR$/Machine-Learning/02classifier/classifier.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Machine-Learning/classifier/data_multivar.txt" afterPath="$PROJECT_DIR$/Machine-Learning/02classifier/data_multivar.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Machine-Learning/supervised-learning/bike_day.csv" afterPath="$PROJECT_DIR$/Machine-Learning/01supervised-learning/bike_day.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Machine-Learning/supervised-learning/data_singlevar.txt" afterPath="$PROJECT_DIR$/Machine-Learning/01supervised-learning/data_singlevar.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Machine-Learning/supervised-learning/saved_model_output.pkl" afterPath="$PROJECT_DIR$/Machine-Learning/01supervised-learning/saved_model_output.pkl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Machine-Learning/supervised-learning/supervised-learning.py" afterPath="$PROJECT_DIR$/Machine-Learning/01supervised-learning/supervised-learning.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/datasets/cat.jpg" afterPath="$PROJECT_DIR$/TensorFlow-Learning/datasets/cat.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/学习文档/机器学习/3、预测建模.md" afterPath="$PROJECT_DIR$/学习文档/机器学习/3、预测建模.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,11 +20,81 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/PythonLeaning$income.coverage" NAME="income Coverage Results" MODIFIED="1515683982071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/Python-Machine-Learning-Cookbook-master/Chapter02" />
+    <SUITE FILE_PATH="coverage/PythonLeaning$traffic.coverage" NAME="traffic Coverage Results" MODIFIED="1515772236188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/Python-Machine-Learning-Cookbook-master/Chapter03" />
+    <SUITE FILE_PATH="coverage/PythonLeaning$svm_confidence.coverage" NAME="svm_confidence Coverage Results" MODIFIED="1515741766329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="E:/深度学习/Python-Machine-Learning-Cookbook-master/Chapter03" />
+    <SUITE FILE_PATH="coverage/PythonLeaning$perform_grid_search.coverage" NAME="perform_grid_search Coverage Results" MODIFIED="1515743153472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="E:/深度学习/Python-Machine-Learning-Cookbook-master/Chapter03" />
+    <SUITE FILE_PATH="coverage/PythonLeaning$svm.coverage" NAME="svm Coverage Results" MODIFIED="1515773364491" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Machine-Learning/03predictive-modeling" />
     <SUITE FILE_PATH="coverage/PythonLeaning$classifier__1_.coverage" NAME="classifier (1) Coverage Results" MODIFIED="1515684172173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Machine-Learning/classifier" />
+    <SUITE FILE_PATH="coverage/PythonLeaning$income.coverage" NAME="income Coverage Results" MODIFIED="1515683982071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/Python-Machine-Learning-Cookbook-master/Chapter02" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="svm.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Machine-Learning/03predictive-modeling/svm.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="201" column="0" lean-forward="true" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
+              <folding>
+                <element signature="e#97#1411#1" expanded="false" />
+                <element signature="e#1413#1431#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="traffic.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/Python-Machine-Learning-Cookbook-master/Chapter03/traffic.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/sklearn/svm/base.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="139">
+              <caret line="188" column="0" lean-forward="false" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="event.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/Python-Machine-Learning-Cookbook-master/Chapter03/event.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="367">
+              <caret line="59" column="76" lean-forward="false" selection-start-line="59" selection-start-column="76" selection-end-line="59" selection-end-column="76" />
+              <folding>
+                <element signature="e#54#72#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="traffic_data.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Machine-Learning/03predictive-modeling/traffic_data.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-262569">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="building_event_multiclass.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Machine-Learning/03predictive-modeling/building_event_multiclass.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -39,11 +105,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>read_aqi_files</find>
-      <find>df</find>
-      <find>valu</find>
-      <find>sort_index</find>
-      <find>loc</find>
       <find>&gt;</find>
       <find>columns</find>
       <find>column</find>
@@ -54,7 +115,6 @@
       <find>import</find>
       <find>分</find>
       <find>zip</find>
-      <find>print</find>
       <find>min</find>
       <find>append</find>
       <find>count</find>
@@ -69,6 +129,12 @@
       <find>G</find>
       <find>transfor</find>
       <find>train_test_split</find>
+      <find>print</find>
+      <find>plot_</find>
+      <find>noevent</find>
+      <find>transform</find>
+      <find>_train</find>
+      <find>F1</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -112,6 +178,11 @@
         <option value="$PROJECT_DIR$/example-python.py" />
         <option value="$USER_HOME$/Desktop/Python-Machine-Learning-Cookbook-master/Chapter02/income.py" />
         <option value="$PROJECT_DIR$/Machine-Learning/classifier/classifier.py" />
+        <option value="E:/深度学习/Python-Machine-Learning-Cookbook-master/Chapter03/perform_grid_search.py" />
+        <option value="$USER_HOME$/Desktop/Python-Machine-Learning-Cookbook-master/Chapter03/event.py" />
+        <option value="$PROJECT_DIR$/Machine-Learning/03predictive-modeling/traffic_data.txt" />
+        <option value="$USER_HOME$/Desktop/Python-Machine-Learning-Cookbook-master/Chapter03/traffic.py" />
+        <option value="$PROJECT_DIR$/Machine-Learning/03predictive-modeling/svm.py" />
       </list>
     </option>
   </component>
@@ -129,10 +200,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="683" />
-    <option name="height" value="728" />
+    <option name="width" value="960" />
+    <option name="height" value="780" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -165,14 +234,31 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="PythonLeaning" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonLeaning" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonLeaning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonLeaning" type="462c0819:PsiDirectoryNode" />
+              <item name="Machine-Learning" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonLeaning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonLeaning" type="462c0819:PsiDirectoryNode" />
+              <item name="Machine-Learning" type="462c0819:PsiDirectoryNode" />
+              <item name="02classifier" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonLeaning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonLeaning" type="462c0819:PsiDirectoryNode" />
+              <item name="Machine-Learning" type="462c0819:PsiDirectoryNode" />
+              <item name="03predictive-modeling" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PythonLeaning" type="b2602c69:ProjectViewProjectNode" />
@@ -216,11 +302,11 @@
       <recent name="C:\Users\Administrator\Desktop\PythonLeaning\Data-Analysis-And-Mining" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\17770426925\PythonLeaning\Machine-Learning\03predictive-modeling" />
+      <recent name="E:\PythonLeaning\Machine-Learning\03predictive-modeling" />
       <recent name="C:\Users\Administrator\Desktop\PythonLeaning\Machine-Learning\classifier" />
       <recent name="E:\17770426925\PythonLeaning\Data-Analysis-And-Mining\pandas" />
       <recent name="E:\17770426925\PythonLeaning\Data-Analysis-And-Mining" />
-      <recent name="C:\Users\Administrator\Desktop\PythonLeaning\Data-Analysis-And-Mining" />
-      <recent name="C:\Users\Administrator\Desktop\PythonLeaning\Machine-Learning" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -235,7 +321,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.classifier (1)">
+  <component name="RunManager" selected="Python.svm">
     <configuration name="classifier (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -272,60 +358,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="example-pandas (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Data-Analysis-And-Mining" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PythonLeaning" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="E:\17770426925\PythonLeaning\Data-Analysis-And-Mining\pandas\example-pandas.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <configuration name="example-pandas (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Data-Analysis-And-Mining/pandas" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PythonLeaning" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Data-Analysis-And-Mining/pandas/example-pandas.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <configuration name="example-pandas" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="PythonLeaning" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\Administrator\Desktop\PythonLeaning\Data-Analysis-And-Mining\example-pandas.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
     <configuration name="example-suanfa" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -344,20 +376,74 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="income" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="perform_grid_search" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop/Python-Machine-Learning-Cookbook-master/Chapter02" />
+      <option name="WORKING_DIRECTORY" value="E:/深度学习/Python-Machine-Learning-Cookbook-master/Chapter03" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PythonLeaning" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/Python-Machine-Learning-Cookbook-master/Chapter02/income.py" />
+      <option name="SCRIPT_NAME" value="E:/深度学习/Python-Machine-Learning-Cookbook-master/Chapter03/perform_grid_search.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="svm" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Machine-Learning/03predictive-modeling" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PythonLeaning" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Machine-Learning/03predictive-modeling/svm.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="svm_confidence" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="E:/深度学习/Python-Machine-Learning-Cookbook-master/Chapter03" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PythonLeaning" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="E:/深度学习/Python-Machine-Learning-Cookbook-master/Chapter03/svm_confidence.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="traffic" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop/Python-Machine-Learning-Cookbook-master/Chapter03" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PythonLeaning" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/Python-Machine-Learning-Cookbook-master/Chapter03/traffic.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -365,16 +451,19 @@
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Python.examle-urllib" />
       <item index="1" class="java.lang.String" itemvalue="Python.example-suanfa" />
-      <item index="2" class="java.lang.String" itemvalue="Python.example-pandas" />
-      <item index="3" class="java.lang.String" itemvalue="Python.example-pandas (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.example-pandas (2)" />
-      <item index="5" class="java.lang.String" itemvalue="Python.classifier (1)" />
-      <item index="6" class="java.lang.String" itemvalue="Python.income" />
+      <item index="2" class="java.lang.String" itemvalue="Python.classifier (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Python.svm" />
+      <item index="4" class="java.lang.String" itemvalue="Python.svm_confidence" />
+      <item index="5" class="java.lang.String" itemvalue="Python.perform_grid_search" />
+      <item index="6" class="java.lang.String" itemvalue="Python.traffic" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Python.classifier (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.income" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.svm" />
+        <item index="1" class="java.lang.String" itemvalue="Python.traffic" />
+        <item index="2" class="java.lang.String" itemvalue="Python.perform_grid_search" />
+        <item index="3" class="java.lang.String" itemvalue="Python.svm_confidence" />
+        <item index="4" class="java.lang.String" itemvalue="Python.classifier (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -428,23 +517,26 @@
     <option name="totallyTimeSpent" value="62000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3128964" sideWeight="0.5052083" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="SFDX" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4037855" sideWeight="0.24963397" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11812298" sideWeight="0.5071542" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19873817" sideWeight="0.7693997" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4037855" sideWeight="0.75036603" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15052083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20424597" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3128964" sideWeight="0.49479166" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Log Manager" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39747635" sideWeight="0.47877014" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.397463" sideWeight="0.47447917" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="SFDX" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -453,7 +545,6 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2707889" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -462,7 +553,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Translate" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46607342" sideWeight="0.48294243" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -474,7 +564,7 @@
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18176973" sideWeight="0.5117057" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Log Manager" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3128964" sideWeight="0.49479166" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -493,32 +583,18 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/example-tensorflow.py" />
-    <entry file="file://$PROJECT_DIR$/example-tensorflow-8-冲突-NSGUF.py" />
-    <entry file="file://$PROJECT_DIR$/mnist_eval.py" />
-    <entry file="file://$PROJECT_DIR$/nohuadong.py" />
-    <entry file="file://$PROJECT_DIR$/gui.py" />
-    <entry file="file://$PROJECT_DIR$/example-suanfa.py" />
-    <entry file="file://$PROJECT_DIR$/TensorFlow-Learning/example-auto.py" />
-    <entry file="file://$PROJECT_DIR$/app.sql" />
-    <entry file="file://$PROJECT_DIR$/example-sql1.py" />
-    <entry file="file://$PROJECT_DIR$/example-sql.py" />
-    <entry file="file://$PROJECT_DIR$/Scrapy/APPInfo.py" />
-    <entry file="file://$PROJECT_DIR$/TensorFlow-Learning/mnist_train.py" />
-    <entry file="file://$PROJECT_DIR$/TensorFlow-Learning/example-tensorflow-5.py" />
-    <entry file="file://$PROJECT_DIR$/TensorFlow-Learning/example-tensorflow-6.py" />
-    <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/sklearn/utils/extmath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3306">
-          <caret line="188" column="0" lean-forward="false" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/sklearn/linear_model/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4370">
@@ -613,17 +689,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/学习文档/数据分析与挖掘/Pandas学习笔记.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="353" column="0" lean-forward="true" selection-start-line="353" selection-start-column="0" selection-end-line="353" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="544">
             <caret line="480" column="0" lean-forward="false" selection-start-line="480" selection-start-column="0" selection-end-line="480" selection-end-column="0" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="353" column="0" lean-forward="true" selection-start-line="353" selection-start-column="0" selection-end-line="353" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -634,29 +710,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Machine-Learning/01supervised-learning/bike_day.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="9" column="72" lean-forward="false" selection-start-line="9" selection-start-column="72" selection-end-line="9" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Machine-Learning/01supervised-learning/supervised-learning.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="130" column="34" lean-forward="false" selection-start-line="130" selection-start-column="34" selection-end-line="130" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Machine-Learning/01supervised-learning/bike_day.csv" />
+    <entry file="file://$PROJECT_DIR$/Machine-Learning/01supervised-learning/supervised-learning.py" />
     <entry file="file://$PROJECT_DIR$/学习文档/机器学习/监督学习.md" />
     <entry file="file://$PROJECT_DIR$/学习文档/机器学习/创建分类器.md" />
-    <entry file="file://$PROJECT_DIR$/Machine-Learning/02classifier/data_multivar.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Data-Analysis-And-Mining/pandas/example-pandas.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -684,13 +741,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/sklearn/cross_validation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/sklearn/decomposition/kernel_pca.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -705,16 +755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/学习文档/机器学习/2、创建分类器.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-777">
-            <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/example-python.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-300">
@@ -722,13 +762,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Machine-Learning/02classifier/car.data.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1699" column="22" lean-forward="false" selection-start-line="1699" selection-start-column="19" selection-end-line="1699" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Machine-Learning/02classifier/car.data.txt" />
     <entry file="file://$USER_HOME$/Desktop/Python-Machine-Learning-Cookbook-master/Chapter02/income.py" />
     <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/sklearn/utils/validation.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -737,32 +771,129 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Machine-Learning/02classifier/classifier.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="378" column="0" lean-forward="false" selection-start-line="378" selection-start-column="0" selection-end-line="378" selection-end-column="0" />
-          <folding>
-            <element signature="e#83#654#1" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Machine-Learning/02classifier/adult.data.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="32545" column="119" lean-forward="false" selection-start-line="32545" selection-start-column="119" selection-end-line="32545" selection-end-column="123" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Machine-Learning/02classifier/adult.data.txt" />
     <entry file="file://$PROJECT_DIR$/学习文档/机器学习/3、预测建模.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Machine-Learning/02classifier/data_multivar.txt" />
+    <entry file="file://$PROJECT_DIR$/Machine-Learning/03predictive-modeling/data_multivar.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="11" lean-forward="true" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Machine-Learning/03predictive-modeling/data_multivar_imbalance.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Machine-Learning/02classifier/classifier.py" />
+    <entry file="file://E:/深度学习/Python-Machine-Learning-Cookbook-master/Chapter03/svm_confidence.py" />
+    <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/sklearn/cross_validation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/sklearn/grid_search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/sklearn/utils/class_weight.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1896">
+          <caret line="53" column="8" lean-forward="true" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/深度学习/Python-Machine-Learning-Cookbook-master/Chapter03/utilities.py" />
+    <entry file="file://E:/深度学习/Python-Machine-Learning-Cookbook-master/Chapter03/perform_grid_search.py" />
+    <entry file="file://$PROJECT_DIR$/Machine-Learning/03predictive-modeling/building_event_multiclass.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/深度学习/Python-Machine-Learning-Cookbook-master/Chapter03/event.py" />
+    <entry file="file://$PROJECT_DIR$/Machine-Learning/03predictive-modeling/building_event_binary.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="1219" column="0" lean-forward="false" selection-start-line="1219" selection-start-column="0" selection-end-line="1219" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/sklearn/svm/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="188" column="0" lean-forward="false" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/学习文档/机器学习/2、创建分类器.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="96">
+            <caret line="140" column="118" lean-forward="false" selection-start-line="140" selection-start-column="103" selection-end-line="140" selection-end-column="118" />
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Python-Machine-Learning-Cookbook-master/Chapter03/event.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="59" column="76" lean-forward="false" selection-start-line="59" selection-start-column="76" selection-end-line="59" selection-end-column="76" />
+          <folding>
+            <element signature="e#54#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Python-Machine-Learning-Cookbook-master/Chapter03/traffic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Machine-Learning/03predictive-modeling/traffic_data.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-262569">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Machine-Learning/03predictive-modeling/svm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="201" column="0" lean-forward="true" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
+          <folding>
+            <element signature="e#97#1411#1" expanded="false" />
+            <element signature="e#1413#1431#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
