@@ -25,7 +25,7 @@ line_y=line_x
 plt.plot(line_x,line_y,color='blue',linewidth=3)
 plt.show()
 """
-#逻辑回归分类器
+# 逻辑回归分类器
 '''
 
 
@@ -48,6 +48,7 @@ plot_classifier(classifier,X,y)
 '''
 import matplotlib.pyplot as plt
 import numpy as np
+
 
 # 定义画图函数
 def plot_classifier(classifier, X, y):
@@ -74,6 +75,7 @@ def plot_classifier(classifier, X, y):
     plt.xticks((np.arange(int(min(X[:, 0]) - 1), int(max(X[:, 0]) + 1), 1.0)))
     plt.yticks((np.arange(int(min(X[:, 1]) - 1), int(max(X[:, 1]) + 1), 1.0)))
     plt.show()
+
 
 # 朴素贝叶斯分类器
 '''
@@ -201,47 +203,171 @@ target_names = ['Class-0', 'Class-1', 'Class-2', 'Class-3']
 print(classification_report(y_true,y_pred,target_names=target_names))
 '''
 
-# 根据汽车特征评估质量
-
-from sklearn import preprocessing
 from sklearn.ensemble import RandomForestClassifier
+# 根据汽车特征评估质量
+'''
+from sklearn import preprocessing
 
 # 准备数据
-input_file='car.data.txt'
+input_file = 'car.data.txt'
 
-X=[]
-count=0
-with open(input_file,'r') as f:
+X = []
+count = 0
+with open(input_file, 'r') as f:
     for line in f.readlines():
-        data=line[:-1].split(',')
+        data = line[:-1].split(',')  # line[:-1]表示line中最后一个换行删除
         X.append(data)
 
-X=np.array(X)
+X = np.array(X)
 
 # 使用标记编将字符串转化为数值
+label_encoder = []
+X_encoder = np.empty(X.shape)
 
+for i, item in enumerate(X[0]):  # 由于相同的信息是以列的形式显示，所以应该按列进行标记编码
+    label_encoder.append(preprocessing.LabelEncoder())  # 初始化每列的标记编码器
+    X_encoder[:, i] = label_encoder[-1].fit_transform(X[:, i])  # 未标记编码
 
+X = X_encoder[:, :-1].astype(int)  # 将所有数据的除最后一列作为X，最后一列作为y
+y = X_encoder[:, -1].astype(int)
 
+# 训练随机森林分类器
+params = {'n_estimators': 200, 'max_depth': 8, 'random_state': 7}  # 跟上章监督学习中的随机森林回归的参数一个意思：
+# n_estimators指评估器的数量，则决策树数量，min_samples_split指决策树分裂一个节点需要用到的最小数据样本量
+classifier = RandomForestClassifier(**params)
+classifier.fit(X, y)
+'''
+# 进行交叉验证
+'''
+from sklearn import model_selection
 
+# model_selection 将之前的sklearn.cross_validation, sklearn.grid_search 和 sklearn.learning_curve模块组合到一起
 
+accuracy = model_selection.cross_val_score(classifier, X, y, scoring='accuracy', cv=3)
+print('accuracy:', str(round(accuracy.mean(), 2)) + '%')
 
+# 对某条信息进行分类
+input_data = ['low', 'low', '4', 'more', 'big', 'med']
+input_data_encoded = [-1] * len(input_data)
 
+for i, item in enumerate(input_data):
+    labels=[]
+    labels.append(input_data[i])# 转换形式，否则下行会报错
+    input_data_encoded[i] = int(label_encoder[i].transform(labels))
 
+input_data_encoder = np.array(input_data_encoded)
+output_class = classifier.predict(input_data_encoder)  # 预测
+print('结果：', label_encoder[-1].inverse_transform(output_class)[0])  # 最后一个编码器是结果
+'''
 
+# 验证曲线
+'''
+from sklearn.model_selection import  validation_curve
 
+classifier=RandomForestClassifier(max_depth=4,random_state=7)
+parameter_grid=np.linspace(25,200,8).astype(int)
+train_scores,validation_scores=validation_curve(classifier,X,y,'n_estimators',parameter_grid,cv=5)#对n_estimators参数进行验证
+print('training scores:',train_scores)
+print('validation scores:',validation_scores)
 
+plt.figure()
+plt.plot(parameter_grid,100*np.average(train_scores,axis=1),color='black')
+plt.show()
 
+classifier=RandomForestClassifier(n_estimators=20,random_state=7)
+parameter_grid=np.linspace(2,10,5).astype(int)
+train_scores,validation_scores=validation_curve(classifier,X,y,'max_depth',parameter_grid,cv=5)#max_depth
+print('training scores:',train_scores)
+print('validation scores:',validation_scores)
 
+plt.figure()
+plt.plot(parameter_grid,100*np.average(train_scores,axis=1),color='black')
+plt.show()
 
+'''
 
+# 学习曲线
+'''
+from sklearn.model_selection import learning_curve
 
+classifier=RandomForestClassifier(random_state=7)
+parameter_grid=np.array([200,500,800,1100])
+train_size,train_scores,validation_scores=learning_curve(classifier,X,y,train_sizes=parameter_grid,cv=5)#cv表示五折交叉验证
+print('train_scores:',train_scores)
+print('validation_scores:',validation_scores)
 
+plt.figure()
+plt.plot(parameter_grid,100*np.average(train_scores,axis=1),color='black')
+plt.show()
 
+'''
 
+# 估算收入阶层
 
+# 1、读取数据
+input_file='adult.data.txt'
+X=[]
 
+countLess=0
+countMore=0
+countAll=20000
 
+with open(input_file,'r') as f:
+    for line in f.readlines():
+        if '?' not in line:
+            data=line[:-1].split(', ')
+            # 2、若大部分点都属于同一个类型，则分类器会倾向于该类型，所以应该选出大于50k与小于等于50k各10000
+            if data[-1]=='<=50K' and countLess<countAll:
+                X.append(data)
+                countLess=countLess+1
+            elif data[-1]=='>50K' and countMore<countAll:
+                X.append(data)
+                countMore=countMore+1
+            if countMore>=countAll and countLess>=countAll:
+                break;
 
+X=np.array(X)
+from sklearn import preprocessing
+# 3、对数据进行编码
+label_encoder=[]
+for i,item in enumerate(X[0]):
+    if item.isdigit():
+        X[:,i]=X[:,i]
+    else:
+        label_encoder.append(preprocessing.LabelEncoder())
+        X[:,i]=label_encoder[-1].fit_transform(X[:,i])
+
+y=X[:,-1].astype(int)
+X=X[:,:-1].astype(int)
+# 4、将数据分成训练和测试
+
+from sklearn.model_selection import train_test_split
+from sklearn.model_selection import cross_val_score
+from sklearn.naive_bayes import GaussianNB
+X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.25,random_state=5)
+# 5、训练数据
+classifier_gaussiannb=GaussianNB()
+classifier_gaussiannb.fit(X_train,y_train)
+y_test_pred=classifier_gaussiannb.predict(X_test)
+# 6、提取性能指标
+f1=cross_val_score(classifier_gaussiannb,X,y,scoring='f1_weighted',cv=5)
+print('f1:',str(round(f1.mean()*100,2))+'%')
+# 7、预测新的值
+input_data = ['39', 'State-gov', '77516', 'Bachelors', '13', 'Never-married', 'Adm-clerical', 'Not-in-family', 'White', 'Male', '2174', '0', '40', 'United-States']
+count=0
+input_data_encoder=[-1]*len(input_data)
+for i,item in enumerate(input_data):
+    if item.isdigit():
+        input_data_encoder[i]=int(input_data[i])
+    else:
+        labels = []
+        labels.append(input_data[i])
+        input_data_encoder[i]=int(label_encoder[count].transform(labels))
+        count=count+1
+
+result=classifier_gaussiannb.predict(input_data_encoder)
+result=label_encoder[-1].inverse_transform(result)
+print('resutl:',result)
 
 
 
