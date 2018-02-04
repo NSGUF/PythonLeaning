@@ -219,7 +219,7 @@ from sklearn.svm import SVR
 params={'kernel':'rbf','C':10.0,'epsilon':0.2}# C表示对分类的惩罚，参数epsilon表示不使用惩罚的限制
 regressor=SVR(**params)
 regressor.fit(X,y)
-with open('svr_eample.pkl','wb') as f:
+with open('svr_eample.pkl','wb') as f:#由于训练太慢 所以可以将模型保存起来
     p.dump(regressor,f)
 '''
 import pickle  as p
