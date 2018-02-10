@@ -323,3 +323,28 @@ import numpy as np
 # df_aqi2=pd.read_pickle('df.pickle')
 # print(df.equals(df_aqi2))
 
+df = pd.DataFrame(np.random.randint(0, 10, (4, 2)), index=['A', 'B', 'C', 'D'], columns=['a', 'b'])
+print(df)
+# print(df.corr())# a和b的pearson关系
+# print(df.corr(method='spearman'))# a和b的spearson关系，method可用pearson、Kendall、spearman
+# print(df['a'].corr(df['b']))# df['a']和df['b']都是Series
+# print(df.cov())# 协方差
+# print(df['a'].cov(df['b']))# df['a']和df['b']都是Series
+
+# print(df.skew())# 数据样本的偏度（三阶矩）df可为DataFrame 也可为Series
+# print(df.kurt())# 峰度（四阶矩）
+
+#pandas累积统计特征函数
+# print(df.cumsum()) # 列中 累积相加
+# print(df.cumprod()) # 列中 累积想乘
+# print(df.cummax()) # 列中 累积获取最大
+# print(df.cummin()) # 列中 累积获取最小
+
+# print(df.rolling(window=2,center=False).sum()) # 列中相邻两个之间的和
+print(df.rolling(window=2,center=False).mean()) # 列中相邻两个之间的算术平均数
+print(df.rolling(window=2,center=False).var()) # 列中相邻两个之间的方差
+print(df.rolling(window=2,center=False).std()) # 列中相邻两个之间的标准差
+print(df.rolling(window=2,center=False).corr()) # 列中相邻两个之间的pearson相关系数矩阵
+print(df.rolling(window=2,center=False).cov()) # 列中相邻两个之间的协方差矩阵
+print(df.rolling(window=2,center=False).skew()) # 列中相邻两个之间的样本值的偏度
+print(df.rolling(window=2,center=False).kurt()) # 列中相邻两个之间的样本值的峰度
