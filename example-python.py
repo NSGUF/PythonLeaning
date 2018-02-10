@@ -625,14 +625,28 @@ Created on Wed Aug 30 09:34:08 2017
 # t1.join()
 # t2.join()
 #==============================================================================
+'''
+a=[1,2,3]
+b=[4,5,6]
+zipped=zip(a,b)# 将对象中对应的元素打包成一个个元组
+x,y=zip(*zipped)
+print(x)
+print(y)
+'''
 
+# csv使用
+import csv
+import numpy as np
+input_file=''
+file_reader=csv.reader(open(input_file,'rb'),delimiter=',')
+X=[]
+for count,row in enumerate(file_reader):
+    if not count:
+        names=row[2:0]
+        continue
+    X.append([float(x) for x in row[2:]])
 
-
-
-
-
-
-
+X=np.array(X)
 
 
 
