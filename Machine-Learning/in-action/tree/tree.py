@@ -112,7 +112,7 @@ def classify(inputTree, featLabels, testVec):
     else:
         classLabel = valueOfFeat
     return classLabel
-          
+             
 
 print(classify(myTree, ['no surfacing', 'flippers'], [1, 0]))
 
