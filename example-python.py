@@ -12,8 +12,12 @@ Created on Wed Aug 30 09:34:08 2017
 #==============================================================================
 # 数值：整数、浮点数、字符串、空值、布尔
 # 布尔运算：and or not
-# str运算：'1'.replace('1','2')
-# isinstance(x, (int, float))检查x是否属于int或float
+# str运算：
+#==============================================================================
+#==============================================================================
+# x='1'.replace('1','2')
+# print(x)
+# print(isinstance(x, (int, float)))#检查x是否属于int或float
 #==============================================================================
 
 #==============================================================================
@@ -24,19 +28,19 @@ Created on Wed Aug 30 09:34:08 2017
 
 #==============================================================================
 # #list 其中元素可以不同
-# names=['Bob','Mary','Jack']
+# names=['Mary','Bob','Jack']
 # print(len(names))
 # print(names[0])
 # print(names[-1])
 # names.append('Dav')#追加
 # names.count(1)# 统计a中元素1出现的次数
+# names.sort()#排序
 # names.extend([1,2])# 将列表[1,2]的内容追加到a的末尾中
 # names.index('Bob')# 第一个Bob的索引位置
 # names.insert(1,'Kery')#插入，第一个参数是位置
 # names.pop(3)#删除指定位置
 # names[1]='Arry'#替换
-# names.sort()#排序
-# 如果想复制names，不能使用name=names，因为name只是引用了names，正确方法是：
+# #如果想复制names，不能使用name=names，因为name只是引用了names，正确方法是：
 # name=names[:]
 #==============================================================================
 
@@ -48,8 +52,8 @@ Created on Wed Aug 30 09:34:08 2017
 # #tuple的不变表示指向不变，比如元组中有一个list，list的指向不变，但是list中的值可以变
 # t=(1,2,[1,2])
 # t[2][0]=5
+# 
 #==============================================================================
-
 #==============================================================================
 # #条件判断
 # cl=5
@@ -69,22 +73,26 @@ Created on Wed Aug 30 09:34:08 2017
 # while n<len(names):
 #     print(names[n])
 #     n=n+1
+# 
 #==============================================================================
-
 #==============================================================================
 # #dict 字典，键值对形式，查找速度快，key不可变，所以key不能为list
 # d={'1':1,'2':2}
-# d=dict([['1',1])
+# d=dict([['1',2],['2',3],['3',3]])
 # print(d['1'])
 # d['1']=11#改变值
 # if '1' in d:#避免key不存在报错
 #     print(d['1'])
-# print(d.get('1'))#如果key不存在，返回None
+# print(d.get('3'))#如果key不存在，返回None
 # d.pop('1')#删除该值，value也会被删除掉
-# for k,v in d.items:
+# if len(d)>0:
+#     d.popitem()# 随机返回并删除
+# print(str(d))# 按照字符打印
+# for k,v in d.items():# 迭代打印
 #     print(k,v)
+# d.clear()# 清空条目
+# del d# 删除
 #==============================================================================
-
 #==============================================================================
 # dict内部存放的顺序和key放入的顺序是没有关系的。
 # 和list比较，dict有以下几个特点：
@@ -110,15 +118,16 @@ Created on Wed Aug 30 09:34:08 2017
 
 #==============================================================================
 # #python内置函数
-# abs(100)
-# max(1,2,3,5)
-# min(1,2,3,4)
+# import operator
+# print(operator.eq(1,2))# 比较两个大小，替代了cmp方法
+# print(abs(100))
+# print(max(1,2,3,5))
+# print(min(1,2,3,4))
 # print(round(3.4543,2))# 表示四舍五入，第二个参数表示几个小数点
-# int('123')
-# cmp(a,b)# 比较两个列表/元组的元素
-# float('123.43')
-# str(1.24)
-# bool(1)
+# print(int('123'))
+# print(float('123.43'))
+# print(str(1.24))
+# print(bool(1))
 #==============================================================================
 
 #==============================================================================
@@ -160,8 +169,8 @@ Created on Wed Aug 30 09:34:08 2017
 # print(l)
 # l=[m+n for m in 'ABC' for n in 'XYZ']
 # print(l)
-# 
 #==============================================================================
+
 
 #==============================================================================
 # #生成器 generator  generator保存的是算法
@@ -189,12 +198,11 @@ Created on Wed Aug 30 09:34:08 2017
 #==============================================================================
 
 #=============排序问题=================================================================
-# def by_name(t):
-#     return t[0]
-# L = [('Bob', 75), ('Adam', 92), ('Bart', 66), ('Lisa', 88)]
-# print(sorted(L,key=by_name))
-# print(sorted(['bob', 'about', 'Zoo', 'Credit'], key=str.lower, reverse=True))#忽略大小写
-# 
+#def by_name(t):
+#    return t[0]
+#L = [('Bob', 75), ('Adam', 92), ('Bart', 66), ('Lisa', 88)]
+#print(sorted(L,key=by_name))
+#print(sorted(['bob', 'about', 'Zoo', 'Credit'], key=str.lower, reverse=True))#忽略大小写
 #==============================================================================
 
 #==============================================================================
@@ -207,7 +215,7 @@ Created on Wed Aug 30 09:34:08 2017
 # def count():
 #     fs = []
 #     def f(x):
-#         return lambda: x*x#通过匿名函数
+#         return lambda : x*x#通过匿名函数
 #     for i in range(1, 4):
 #         fs.append(f(i))
 #     return fs
@@ -305,8 +313,8 @@ Created on Wed Aug 30 09:34:08 2017
 # #限制实例的属性
 # class XiaoStudnet(Student):
 #     __slots__=('name','score','age')# 用tuple定义允许绑定的属性名称
-# 
 #==============================================================================
+
 
 # =============================================================================
 # #@property
@@ -328,66 +336,64 @@ Created on Wed Aug 30 09:34:08 2017
 #     pass
 # =============================================================================
 
-# =============================================================================
-# #位实例添加一个打印显示
-# class Student(object):
-#     def __init__(self, name):
-#         self.name = name
-#     def __str__(self):
-#         return 'Student object (name=%s)' % self.name
-#     __repr__ = __str__
-# 
-# print(Student("123"))
-# =============================================================================
+##位实例添加一个打印显示
+#class Student(object):
+#    def __init__(self, name):
+#        self.name = name
+#    def __str__(self):
+#        return 'Student object (name=%s)' % self.name
+#   
+#
+#print(Student("123"))
 
+##如果一个类想被用于for ... in循环，类似list或tuple那样，就必须实现一个__iter__()方法，
+##该方法返回一个迭代对象
+#class Fib(object):
+#    def __init__(self):
+#        self.a, self.b = 0, 1 # 初始化两个计数器a，b
+#
+#    def __iter__(self):
+#        return self # 实例本身就是迭代对象，故返回自己
+#
+#    def __getitem__(self, n):#直接f[]显示
+#        if isinstance(n, int): # n是索引
+#            a, b = 1, 1
+#            for x in range(n):
+#                a, b = b, a + b
+#            return a
+#        if isinstance(n, slice): # n是切片
+#            start = n.start
+#            stop = n.stop
+#            if start is None:
+#                start = 0
+#            a, b = 1, 1
+#            L = []
+#            for x in range(stop):
+#                if x >= start:
+#                    L.append(a)
+#                a, b = b, a + b
+#            return L
+#    def __getattr__(self, attr):#防止不存在的属性，报错
+#        if attr=='score':
+#            return 99
+#    def __call__(self):#可以直接对实例进行调用 s()
+#        print('My name is %s.' % self.name)
+#    def __next__(self):
+#        self.a, self.b = self.b, self.a + self.b # 计算下一个值
+#        if self.a > 100000: # 退出循环的条件
+#            raise StopIteration()
+#        return self.a # 返回下一个值
+#for i in Fib():
+#    print(i)
 # =============================================================================
-# #如果一个类想被用于for ... in循环，类似list或tuple那样，就必须实现一个__iter__()方法，该方法返回一个迭代对象
-# class Fib(object):
-#     def __init__(self):
-#         self.a, self.b = 0, 1 # 初始化两个计数器a，b
-# 
-#     def __iter__(self):
-#         return self # 实例本身就是迭代对象，故返回自己
-#     
-#     def __getitem__(self, n):#直接f[]显示
-#         if isinstance(n, int): # n是索引
-#             a, b = 1, 1
-#             for x in range(n):
-#                 a, b = b, a + b
-#             return a
-#         if isinstance(n, slice): # n是切片
-#             start = n.start
-#             stop = n.stop
-#             if start is None:
-#                 start = 0
-#             a, b = 1, 1
-#             L = []
-#             for x in range(stop):
-#                 if x >= start:
-#                     L.append(a)
-#                 a, b = b, a + b
-#             return L
-#     def __getattr__(self, attr):#防止不存在的属性，报错
-#         if attr=='score':
-#             return 99
-#     def __call__(self):#可以直接对实例进行调用 s()
-#         print('My name is %s.' % self.name)
-#     def __next__(self):
-#         self.a, self.b = self.b, self.a + self.b # 计算下一个值
-#         if self.a > 100000: # 退出循环的条件
-#             raise StopIteration()
-#         return self.a # 返回下一个值
-# =============================================================================
-
-# =============================================================================
-# #枚举类
+# # 枚举类
 # from enum import Enum
 # Month = Enum('Month', ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'))
 # for name, member in Month.__members__.items():
 #     print(name, '=>', member, ',', member.value)
-# 
+#
 # from enum import Enum, unique
-# 
+#
 # @unique#@unique装饰器可以帮助我们检查保证没有重复值。
 # class Weekday(Enum):
 #     Sun = 0 # Sun的value被设定为0
@@ -407,35 +413,36 @@ Created on Wed Aug 30 09:34:08 2017
 #     print(e)
 # finally:
 #     print('finally...')
-#     
+#
 # print('end')
 # =============================================================================
 
 # =============================================================================
 # #读写文件
 # try:
-#     f=open('test.txt','r')
+#     f=open('text_b.txt','r')
 #     print(f.read())
 # finally:
 #     if f:
 #         f.close()
-# 
-# with open('test.txt','r') as f:
+#
+# with open('text_b.txt','r') as f:
 #     print(f.read())
 #     #防止文件过大，一行一行读
 #     for line in f.readline():
 #         print(line.strip())
-#     
-# with open('test.txt','w') as f:
+#
+# with open('text_b.txt','w') as f:
 #     f.write('Hello,world!')
 # =============================================================================
 
 #==============================================================================
-# #StringIO 内存中读写str
+# #StringIO 内存读写str中
 # from io import StringIO
 # f=StringIO()
 # print(f.write('hello'))
 # s=f.getvalue()
+# print(s)
 #==============================================================================
 
 #==============================================================================
@@ -446,17 +453,13 @@ Created on Wed Aug 30 09:34:08 2017
 #     if s=='':
 #         break
 #     print(s.strip())
+# 
 #==============================================================================
-
 #==============================================================================
 # from io import BytesIO
 # f=BytesIO()
 # print(f.write("中文".encode('utf-8')))
 # print(f.getvalue())
-#==============================================================================
-
-#==============================================================================
-# from io import BytesIO
 # f=BytesIO(b'\xe4\xb8\xad\xe6\x96\x87')
 # print(f.read())
 #==============================================================================
@@ -474,12 +477,13 @@ Created on Wed Aug 30 09:34:08 2017
 # print(os.path.split('C:\\Users\\Administrator\\Desktop\\PythonLeaning'))#拆分路径，最后一个拆出来
 # print(os.path.splitext('C:\\Users\\Administrator\\Desktop\\PythonLeaning\\test.txt'))#获得文件扩展名
 # #这些合并、拆分路径的函数并不要求目录和文件要真实存在，它们只对字符串进行操作。
-# print(os.rename('test.txt','test.py'))#重命名
-# print(os.remove('test.py'))#删除文件
+# print(os.rename('text_b.txt','test.txt'))#重命名
+# print(os.remove('test.txt'))#删除文件
 # print([x for x in os.listdir('.') if os.path.isdir(x)])#累出当前目录下所有目录
 # print([x for x in os.listdir('.') if os.path.isfile(x) and os.path.splitext(x)[1]=='.py'])#列出所有.py的文件
+# for x in os.listdir('.'):
+#     print(x)
 #==============================================================================
-
 #==============================================================================
 # #序列化 ：把变量从内存中变成可存储或传输的过程称之为序列化
 # import pickle
@@ -527,9 +531,7 @@ Created on Wed Aug 30 09:34:08 2017
 # #线程 python的os模块封装了常见的系统调用，
 # import os
 # from multiprocessing import Process
-#==============================================================================
-
-#==============================================================================
+# 
 # #子线程要执行的代码
 # def run_proc(name):
 #     print(name,os.getpid())

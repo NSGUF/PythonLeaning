@@ -41,6 +41,9 @@ print(np.arange(4))#相当下面的式子
 print(np.arange(0,4,1))
 print(np.arange(12).reshape(4,3))#更换成shape为4,3
 a=np.arange(24).reshape(2,3,4)
+
+print("------------创建数组的方法-1111-------------")
+print(np.tile([0,0],(3,1)))# [0,0]在行上重复3次，在列上重复1次
 #print(a.resize(24))#resize作用与reshape相同，但是调用resize将会改变自身，reshape不会
 b=np.arange(4)
 print(a)#shape为2,3,4，ps：总个数必须为shape的乘积，否则报错
@@ -121,3 +124,5 @@ print(np.random.rand(3,2))#均匀分布的样本值
 print(np.random.randint(5,size=(4,3)))#第一个属性为上限表示0-5，
 print(np.random.randn())#正态分布（平均值为0，标准差为1）的样本值
 print(np.random.beta(10,10,size=10))#beta分布
+
+print(np.ceil([0.2,-0.1]))# 向正无穷取整
